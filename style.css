@@ -11,10 +11,11 @@ body {
 
 .clock-section {
   display: inline-block;
+  padding-right: 8px;
 }
 
 .clock-section .value {
-  width: 100px;
+  width: 125px;
   height: 100px;
   line-height: 100px;
   background-color: #333;
