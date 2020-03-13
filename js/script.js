@@ -1,5 +1,3 @@
-import moment from 'moment';
-
 const targetDate = moment("1/1/2021");
 
 const $days = $("#days"),
