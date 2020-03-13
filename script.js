@@ -27,9 +27,17 @@ function updateClock(remainingTime) {
   secs = Math.floor(remainingTime.asSeconds()) % 60; // modulo will give us the remaining seconds in a minute
 
   // applying the above variables to the text fields - jquery
-  $('#days').text(days);
-  $('#hours').text(hrs);
-  $('#minutes').text(mins);
-  $('#seconds').text(secs);
+  $('#days').text(padNumber(days));
+  $('#hours').text(padNumber(hrs));
+  $('#minutes').text(padNumber(mins));
+  $('#seconds').text(padNumber(secs));
+}
 
+// This function will add a '0' to the seconds when it goes below 10
+function padNumber(number) {
+    let formattedNum = number;
+    if (number < 10) {
+        formattedNum = '0' + formattedNum;
+    }
+    return formattedNum;
 }
